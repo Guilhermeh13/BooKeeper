@@ -1,24 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cjs-gQ-exr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--A Ler-->
+        <scene sceneID="D8i-e3-oVF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="xhS-oR-fSf" customClass="aLerViewController" customModule="BooKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cih-50-RCV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WmD-3C-j6X">
+                                <rect key="frame" x="0.0" y="73" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xhS-oR-fSf" id="CcB-bj-hpS"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaA-Tv-tiF">
+                                <rect key="frame" x="0.0" y="29" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="A Ler" id="h5U-zX-dBi">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="oAz-3E-GCd">
+                                            <connections>
+                                                <action selector="aLerAction:" destination="xhS-oR-fSf" id="6bW-ui-vr4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XaA-Tv-tiF" firstAttribute="trailing" secondItem="L49-VA-u3A" secondAttribute="trailing" id="5Mm-DB-ojB"/>
+                            <constraint firstItem="WmD-3C-j6X" firstAttribute="bottom" secondItem="L49-VA-u3A" secondAttribute="bottom" id="GiV-7u-2LL"/>
+                            <constraint firstItem="WmD-3C-j6X" firstAttribute="top" secondItem="XaA-Tv-tiF" secondAttribute="bottom" id="YIm-bx-VHj"/>
+                            <constraint firstItem="WmD-3C-j6X" firstAttribute="trailing" secondItem="L49-VA-u3A" secondAttribute="trailing" id="Zo2-de-n6h"/>
+                            <constraint firstItem="XaA-Tv-tiF" firstAttribute="leading" secondItem="L49-VA-u3A" secondAttribute="leading" id="gry-8q-vQg"/>
+                            <constraint firstItem="XaA-Tv-tiF" firstAttribute="top" secondItem="L49-VA-u3A" secondAttribute="top" constant="9" id="ot5-f6-clY"/>
+                            <constraint firstItem="WmD-3C-j6X" firstAttribute="leading" secondItem="L49-VA-u3A" secondAttribute="leading" id="vbg-O9-Hrl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L49-VA-u3A"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="A Ler" image="icons8-literature-25" selectedImage="icons8-literature-25.png" id="00K-wC-NBG"/>
+                    <connections>
+                        <outlet property="tableView" destination="WmD-3C-j6X" id="tgi-PP-CEi"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LhQ-Tx-74W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="616.79999999999995" y="31.934032983508249"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="z8s-rC-I9R">
+            <objects>
+                <viewController id="w8K-Us-fUX" customClass="FavoritosViewController" customModule="BooKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Do7-VI-wr1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jF6-tl-qoM">
+                                <rect key="frame" x="0.0" y="73" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="w8K-Us-fUX" id="Og2-Xu-Pec"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5u-St-9zn">
+                                <rect key="frame" x="0.0" y="29" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Favoritos" id="dRw-PS-xB3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="FDZ-Wn-rgc">
+                                            <connections>
+                                                <action selector="favAction:" destination="w8K-Us-fUX" id="b61-gX-4Fq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jF6-tl-qoM" firstAttribute="leading" secondItem="u1q-dR-PWa" secondAttribute="leading" id="0Y0-Ah-5zl"/>
+                            <constraint firstItem="Y5u-St-9zn" firstAttribute="top" secondItem="u1q-dR-PWa" secondAttribute="top" constant="9" id="0xk-8j-zUg"/>
+                            <constraint firstItem="jF6-tl-qoM" firstAttribute="trailing" secondItem="u1q-dR-PWa" secondAttribute="trailing" id="7dF-hP-QdL"/>
+                            <constraint firstItem="jF6-tl-qoM" firstAttribute="top" secondItem="Y5u-St-9zn" secondAttribute="bottom" id="BAF-yf-tgk"/>
+                            <constraint firstItem="jF6-tl-qoM" firstAttribute="bottom" secondItem="u1q-dR-PWa" secondAttribute="bottom" id="BMX-f5-1Ln"/>
+                            <constraint firstItem="Y5u-St-9zn" firstAttribute="trailing" secondItem="u1q-dR-PWa" secondAttribute="trailing" id="Po9-42-I4o"/>
+                            <constraint firstItem="Y5u-St-9zn" firstAttribute="leading" secondItem="u1q-dR-PWa" secondAttribute="leading" id="toa-GI-lmy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u1q-dR-PWa"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="icons8-star-25" selectedImage="icons8-star-25.png" id="l8t-aK-g0B"/>
+                    <connections>
+                        <outlet property="tableView" destination="jF6-tl-qoM" id="j0S-2q-kCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQ9-98-Ard" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624.79999999999995" y="728.18590704647681"/>
+        </scene>
+        <!--Leitor-->
+        <scene sceneID="cYJ-Qh-RDG">
+            <objects>
+                <viewController id="hrD-dV-be8" customClass="LeitorViewController" customModule="BooKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="okj-Ix-KW1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rqs-AY-RJh">
+                                <rect key="frame" x="0.0" y="29" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Leitor" id="5xz-AF-wuw"/>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="KhP-Z1-0HS">
+                                <rect key="frame" x="0.0" y="73" width="375" height="545"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBp-ee-Vjy">
+                                        <rect key="frame" x="265" y="448" width="81" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Deletar"/>
+                                        <connections>
+                                            <action selector="cleanButton:" destination="hrD-dV-be8" eventType="touchUpInside" id="UtZ-m7-OIT"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maP-Z8-7va">
+                                        <rect key="frame" x="150" y="284" width="74.5" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9y-n3-5Cu">
+                                        <rect key="frame" x="63" y="213" width="249" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data de Nascimento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRD-ZJ-Dpt">
+                                        <rect key="frame" x="97" y="160" width="181.5" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2J-9Y-MyO">
+                                        <rect key="frame" x="63" y="342" width="249" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4n-oG-bhS">
+                                        <rect key="frame" x="33" y="448" width="87" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Inserir"/>
+                                        <connections>
+                                            <action selector="inserirButton:" destination="hrD-dV-be8" eventType="touchUpInside" id="KhU-q5-afA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE1-DM-WKp">
+                                        <rect key="frame" x="150" y="448" width="88" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Atualizar"/>
+                                        <connections>
+                                            <action selector="updateButton:" destination="hrD-dV-be8" eventType="touchUpInside" id="y4D-Y8-kTP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLN-Nh-Loi">
+                                        <rect key="frame" x="150" y="36" width="74.5" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuB-1D-UvB">
+                                        <rect key="frame" x="63" y="88" width="249" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Vko-pi-1hV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Leitor" image="icons8-reading-25" selectedImage="icons8-reading-25" id="Ki0-JW-JWp"/>
+                    <connections>
+                        <outlet property="dtNascimentoLabel" destination="e9y-n3-5Cu" id="xjC-Px-HR5"/>
+                        <outlet property="emailLabel" destination="Q2J-9Y-MyO" id="ZaH-YY-2IY"/>
+                        <outlet property="nameLabel" destination="SuB-1D-UvB" id="F22-m1-osj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhS-va-55q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="1428.9355322338831"/>
+        </scene>
+        <!--Lido-->
+        <scene sceneID="x7G-t4-slb">
+            <objects>
+                <viewController id="GLd-fU-jsI" customClass="LidoViewController" customModule="BooKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qlY-Ki-RdN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Pa-b0-vFA">
+                                <rect key="frame" x="0.0" y="73" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GLd-fU-jsI" id="RbD-60-vB1"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-ZM-Z93">
+                                <rect key="frame" x="0.0" y="29" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Lido" id="WPW-2I-DSj">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="k2p-0m-7Lo">
+                                            <connections>
+                                                <action selector="lidoAction:" destination="GLd-fU-jsI" id="GuH-YV-xrw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Pa-b0-vFA" firstAttribute="leading" secondItem="YZo-oU-2a4" secondAttribute="leading" id="4Hg-3f-B0P"/>
+                            <constraint firstItem="4Pa-b0-vFA" firstAttribute="top" secondItem="ft8-ZM-Z93" secondAttribute="bottom" id="FPu-Dn-qZS"/>
+                            <constraint firstItem="4Pa-b0-vFA" firstAttribute="bottom" secondItem="YZo-oU-2a4" secondAttribute="bottom" id="GHV-f9-oaQ"/>
+                            <constraint firstItem="ft8-ZM-Z93" firstAttribute="leading" secondItem="YZo-oU-2a4" secondAttribute="leading" id="T0L-Oc-Sae"/>
+                            <constraint firstItem="4Pa-b0-vFA" firstAttribute="trailing" secondItem="YZo-oU-2a4" secondAttribute="trailing" id="YYm-Gm-jwO"/>
+                            <constraint firstItem="ft8-ZM-Z93" firstAttribute="top" secondItem="YZo-oU-2a4" secondAttribute="top" constant="9" id="kmz-Z8-Teh"/>
+                            <constraint firstItem="ft8-ZM-Z93" firstAttribute="trailing" secondItem="YZo-oU-2a4" secondAttribute="trailing" id="nGJ-SR-d8H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YZo-oU-2a4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lido" image="icons8-books-25" selectedImage="icons8-books-25" id="e1H-B0-k3N"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Pa-b0-vFA" id="cAl-db-d6O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9t-Mw-cIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616.79999999999995" y="-632.83358320839591"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kqM-nH-kFb">
+            <objects>
+                <tabBarController id="cjs-gQ-exr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UtU-7Z-ouT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GLd-fU-jsI" kind="relationship" relationship="viewControllers" id="vMY-RK-11A"/>
+                        <segue destination="xhS-oR-fSf" kind="relationship" relationship="viewControllers" id="9i1-1H-IA6"/>
+                        <segue destination="w8K-Us-fUX" kind="relationship" relationship="viewControllers" id="0Qe-89-B0G"/>
+                        <segue destination="hrD-dV-be8" kind="relationship" relationship="viewControllers" id="xz5-PY-UlO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xq7-2M-Uty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334" y="-301"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-books-25" width="25" height="25"/>
+        <image name="icons8-literature-25" width="25" height="25"/>
+        <image name="icons8-literature-25.png" width="25" height="25"/>
+        <image name="icons8-reading-25" width="25" height="25"/>
+        <image name="icons8-star-25" width="25" height="25"/>
+        <image name="icons8-star-25.png" width="25" height="25"/>
+    </resources>
 </document>

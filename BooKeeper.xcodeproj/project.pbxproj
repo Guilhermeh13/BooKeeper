@@ -15,6 +15,17 @@
 		3906A08320D55AE100496964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3906A08120D55AE100496964 /* LaunchScreen.storyboard */; };
 		3906A08E20D55AE100496964 /* BooKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A08D20D55AE100496964 /* BooKeeperTests.swift */; };
 		3906A09920D55AE100496964 /* BooKeeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A09820D55AE100496964 /* BooKeeperUITests.swift */; };
+		3906A0AC20D55D0D00496964 /* Favoritos+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A0A620D55D0D00496964 /* Favoritos+CoreDataClass.swift */; };
+		3906A0AD20D55D0D00496964 /* Favoritos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A0A720D55D0D00496964 /* Favoritos+CoreDataProperties.swift */; };
+		3906A0AE20D55D0D00496964 /* Aler+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A0A820D55D0D00496964 /* Aler+CoreDataClass.swift */; };
+		3906A0AF20D55D0D00496964 /* Aler+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A0A920D55D0D00496964 /* Aler+CoreDataProperties.swift */; };
+		3906A0B020D55D0D00496964 /* Lido+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A0AA20D55D0D00496964 /* Lido+CoreDataClass.swift */; };
+		3906A0B120D55D0D00496964 /* Lido+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906A0AB20D55D0D00496964 /* Lido+CoreDataProperties.swift */; };
+		394DA8D820D7D49300BDE06C /* LeitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DA8D720D7D49300BDE06C /* LeitorViewController.swift */; };
+		394DA8DA20D7D49E00BDE06C /* LidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DA8D920D7D49E00BDE06C /* LidoViewController.swift */; };
+		394DA8DC20D7D4AA00BDE06C /* aLerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DA8DB20D7D4AA00BDE06C /* aLerViewController.swift */; };
+		394DA8DE20D7D4B800BDE06C /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DA8DD20D7D4B800BDE06C /* FavoritosViewController.swift */; };
+		394DA8EA20D7DFAA00BDE06C /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DA8E920D7DFAA00BDE06C /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		3906A09420D55AE100496964 /* BooKeeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooKeeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3906A09820D55AE100496964 /* BooKeeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooKeeperUITests.swift; sourceTree = "<group>"; };
 		3906A09A20D55AE100496964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3906A0A620D55D0D00496964 /* Favoritos+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favoritos+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3906A0A720D55D0D00496964 /* Favoritos+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favoritos+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3906A0A820D55D0D00496964 /* Aler+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aler+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3906A0A920D55D0D00496964 /* Aler+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aler+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3906A0AA20D55D0D00496964 /* Lido+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lido+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3906A0AB20D55D0D00496964 /* Lido+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lido+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		394DA8D720D7D49300BDE06C /* LeitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeitorViewController.swift; sourceTree = "<group>"; };
+		394DA8D920D7D49E00BDE06C /* LidoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LidoViewController.swift; sourceTree = "<group>"; };
+		394DA8DB20D7D4AA00BDE06C /* aLerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aLerViewController.swift; sourceTree = "<group>"; };
+		394DA8DD20D7D4B800BDE06C /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		394DA8E920D7DFAA00BDE06C /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +121,12 @@
 		3906A07420D55AE100496964 /* BooKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				3906A0A620D55D0D00496964 /* Favoritos+CoreDataClass.swift */,
+				3906A0A720D55D0D00496964 /* Favoritos+CoreDataProperties.swift */,
+				3906A0A820D55D0D00496964 /* Aler+CoreDataClass.swift */,
+				3906A0A920D55D0D00496964 /* Aler+CoreDataProperties.swift */,
+				3906A0AA20D55D0D00496964 /* Lido+CoreDataClass.swift */,
+				3906A0AB20D55D0D00496964 /* Lido+CoreDataProperties.swift */,
 				3906A07520D55AE100496964 /* AppDelegate.swift */,
 				3906A07720D55AE100496964 /* ViewController.swift */,
 				3906A07920D55AE100496964 /* Main.storyboard */,
@@ -106,6 +134,11 @@
 				3906A08120D55AE100496964 /* LaunchScreen.storyboard */,
 				3906A08420D55AE100496964 /* Info.plist */,
 				3906A07C20D55AE100496964 /* BooKeeper.xcdatamodeld */,
+				394DA8D720D7D49300BDE06C /* LeitorViewController.swift */,
+				394DA8D920D7D49E00BDE06C /* LidoViewController.swift */,
+				394DA8DB20D7D4AA00BDE06C /* aLerViewController.swift */,
+				394DA8DD20D7D4B800BDE06C /* FavoritosViewController.swift */,
+				394DA8E920D7DFAA00BDE06C /* PersistenceService.swift */,
 			);
 			path = BooKeeper;
 			sourceTree = "<group>";
@@ -263,8 +296,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3906A07820D55AE100496964 /* ViewController.swift in Sources */,
+				3906A0AC20D55D0D00496964 /* Favoritos+CoreDataClass.swift in Sources */,
+				394DA8DA20D7D49E00BDE06C /* LidoViewController.swift in Sources */,
 				3906A07620D55AE100496964 /* AppDelegate.swift in Sources */,
+				3906A0B120D55D0D00496964 /* Lido+CoreDataProperties.swift in Sources */,
+				3906A0AE20D55D0D00496964 /* Aler+CoreDataClass.swift in Sources */,
+				394DA8DE20D7D4B800BDE06C /* FavoritosViewController.swift in Sources */,
 				3906A07E20D55AE100496964 /* BooKeeper.xcdatamodeld in Sources */,
+				3906A0AD20D55D0D00496964 /* Favoritos+CoreDataProperties.swift in Sources */,
+				3906A0AF20D55D0D00496964 /* Aler+CoreDataProperties.swift in Sources */,
+				394DA8EA20D7DFAA00BDE06C /* PersistenceService.swift in Sources */,
+				3906A0B020D55D0D00496964 /* Lido+CoreDataClass.swift in Sources */,
+				394DA8DC20D7D4AA00BDE06C /* aLerViewController.swift in Sources */,
+				394DA8D820D7D49300BDE06C /* LeitorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
